@@ -1,0 +1,11 @@
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course.deps.json
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course.runtimeconfig.json
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course.runtimeconfig.dev.json
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course.dll
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/bin/Debug/netcoreapp3.1/aliBaba_c#_Course.pdb
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/obj/Debug/netcoreapp3.1/aliBaba_c#_Course.csprojAssemblyReference.cache
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/obj/Debug/netcoreapp3.1/aliBaba_c#_Course.AssemblyInfoInputs.cache
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/obj/Debug/netcoreapp3.1/aliBaba_c#_Course.AssemblyInfo.cs
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/obj/Debug/netcoreapp3.1/aliBaba_c#_Course.dll
+/home/mohamadhasan/Desktop/aliBaba_c#_Course/obj/Debug/netcoreapp3.1/aliBaba_c#_Course.pdb
