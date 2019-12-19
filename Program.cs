@@ -5,22 +5,39 @@ namespace aliBaba_c__Course
 {
 
 
-    
+   
 
     
     class person {
 
-        public person(int id, int age, String fName, String lName) {
+        public person(int id, String address, String fName, String lName) {
             this.id = id;
-            this.age = age;
+            this.address = address;
             this.fName = fName;
             this.lName = lName;
         }
         public int id;
-        public int age;
+        public String address;
         public String fName;
         public String lName;
     }
+
+
+    class salary {
+        public int id;
+        public int daySalary;
+        public int bahmanSalary;
+        public int esfandSalary;
+
+        public salary(int id, int daySalary, int bahmanSalary, int esfandSalary) {
+            this.id = id;
+            this.daySalary = daySalary;
+            this.bahmanSalary = bahmanSalary;
+            this.esfandSalary = esfandSalary;
+        }
+
+    }
+    
 
     class grade {
         public int pId;
@@ -113,24 +130,24 @@ namespace aliBaba_c__Course
         static void Main(string[] args)
         {
 
-            person p1 = new person(1,20,"mohamad", "fatemi");
-            person p2 = new person(2,21,"mohamadHasan", "Taghadosi");
-            person p3 = new person(3, 20, "zahra", "tehrani");
-            grade g1 = new grade(1,18,20,20);
-            grade g2 = new grade(2,19,17,20);
-            grade g3 = new grade(3,19,18,12);
-            person[] persons = {p1,p2,p3};
-            grade[] grades = {g1,g2,g3};
-            //var joinRes = (from person in persons join grade in grades on person.id equals grade.pId select new {name = person.fName,  csGrade = grade.cs, goGrade = grade.go, javaGrade = grade.java});
+            // person p1 = new person(1,20,"mohamad", "fatemi");
+            // person p2 = new person(2,21,"mohamadHasan", "Taghadosi");
+            // person p3 = new person(3, 20, "zahra", "tehrani");
+            // grade g1 = new grade(1,18,20,20);
+            // grade g2 = new grade(2,19,17,20);
+            // grade g3 = new grade(3,19,18,12);
+            // person[] persons = {p1,p2,p3};
+            // grade[] grades = {g1,g2,g3};
+            // //var joinRes = (from person in persons join grade in grades on person.id equals grade.pId select new {name = person.fName,  csGrade = grade.cs, goGrade = grade.go, javaGrade = grade.java});
             
-            var joinRes = (from person in persons join grade in grades on person.id equals grade.pId let avg = (grade.java + grade.go + grade.cs)/3 select avg);
+            // var joinRes = (from person in persons join grade in grades on person.id equals grade.pId let avg = (grade.java + grade.go + grade.cs)/3 select avg);
             
+            // // foreach(var g in joinRes) {
+            // //     Console.WriteLine(g);
+            // // }
             // foreach(var g in joinRes) {
-            //     Console.WriteLine(g);
-            // }
-            foreach(var g in joinRes) {
-                Console.WriteLine(g.name + " " + ((g.csGrade + g.goGrade + g.javaGrade) /3));
-            }
+            //     Console.WriteLine(g.name + " " + ((g.csGrade + g.goGrade + g.javaGrade) /3));
+            
             // int[] arr = {10,2,8,7343,345,45,23,6,22,2,778,121};
             // //var list  = (from n in arr where n < 400 orderby n descending select n).ToList();
             // var list = (from n in arr where n == 2 select n).Count();
@@ -156,6 +173,49 @@ namespace aliBaba_c__Course
             // "tgh".translate();
             // Console.WriteLine();
             // writer.print(input);
+
+            // int[] numbers = {10,45,677,4,232,2,788,2233,7687,8,54,3454};
+
+            // // var check = numbers.Where(a => a == 2).Any();
+            // // var check = numbers.Any(a => a == 2);
+            // var firstOrDefaultSelect = numbers.Where(a => a == 677).FirstOrDefault();
+            // Console.WriteLine(firstOrDefaultSelect);
+            // var firstSelect = numbers.Where(a => a == 677).First();
+            // Console.WriteLine(firstSelect);
+            // var singleSelect = numbers.Where(a => a == 677).Single();
+            // Console.WriteLine(singleSelect);
+
+            // var singleOrDefaultSelect = numbers.Where(a => a == 677).SingleOrDefault();
+            // Console.WriteLine(singleOrDefaultSelect);
+
+            // String[] names = {"sara","ghasemi","taghad","eldaa","shayan","rahim"};
+            // //var haveCharI = names.Where(a => a.ToLower.Contains('i'));
+
+            // var startWithS = names.Where(a => a.ToLower().StartsWith('s'));
+
+            // foreach(String i in startWithS) {
+            //     Console.WriteLine(i);
+            // }
+
+            person p1 = new person(1,"tehrn","mohamad", "fatemi");
+            person p2 = new person(2,"ahvaz","mohamadHasan", "Taghadosi");
+            person p3 = new person(3, "qom", "zahra", "tehrani");
+            person[] persons = {p1,p2,p3};
+
+            salary s1 = new salary(1,100,200,300);
+            salary s2 = new salary(2,1000,2000,3000);
+            salary s3 = new salary(3,10000,20000,30000);
+            salary[] salaries = {s1,s2,s3};
+
+            var pooldar = salaries.Max(a => a.esfandSalary + a.bahmanSalary + a.daySalary);
+            var idPooldar = salaries.Where(a => a.daySalary + a.esfandSalary + a.bahmanSalary == pooldar).SingleOrDefault();
+
+            var richest = persons.Where(a => a.id == idPooldar.id);
+
+            foreach(person i in richest) {
+                Console.WriteLine(i.fName + " " + i.lName);
+            }
+
 
         }
     }
